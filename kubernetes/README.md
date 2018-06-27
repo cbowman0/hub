@@ -69,8 +69,8 @@ oc adm policy add-scc-to-user anyuid system:serviceaccount:myhub:postgres
 Note we may edit the configmap later for external postgres or other settings.  For now, leave it as it is by default, and run these commands (openshift users: use `oc` instead of `kubectl`).
 
 ```
-kubectl create -f 1-cfssl.yml -n myhub
 kubectl create -f 1-cm-hub.yml -n myhub
+kubectl create -f 1-cfssl.yml -n myhub
 ```
 
 #### Step 3: Choose your postgres database type, and then setup your postgres database
